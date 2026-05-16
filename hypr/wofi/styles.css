@@ -1,0 +1,51 @@
+@import url("/home/kal/.config/hypr/warnaumum.css");
+
+* {
+	background-image: none;
+	border: none;
+	border-radius: 13px;
+}
+
+#outer-box {
+	position: relative;
+	border: 2px solid transparent;
+	padding: 6px;
+	/* background-color: @background; */
+	background-image: linear-gradient(@background, @background), linear-gradient(170deg, @warna1, @warna2);
+	background-origin: border-box;
+	background-clip: padding-box, border-box;
+}
+
+#window {
+	font-size: 24px;
+	background-color: transparent;
+	color: @foreground;
+}
+
+#entry:selected {
+	/* background-color: @warna1; */
+	background-image: linear-gradient(170deg, @warna1, @warna2);
+	background-origin: border-box;
+	background-clip: padding-box, border-box;
+	color: @foreground;
+}
+
+#text:selected {
+	color: @background;
+}
+
+#input {
+	/* background-color: @background; */
+	background-image: linear-gradient(@background, @background), linear-gradient(170deg, @warna1, @warna2);
+	background-origin: border-box;
+	background-clip: padding-box, border-box;
+	/* border-bottom: 2px solid transparent; */
+	color: @foreground;
+	border: 2px solid transparent;
+	margin-bottom: 6px;
+}
+
+image {
+	margin-left: .25em;
+	margin-right: .25em;
+}

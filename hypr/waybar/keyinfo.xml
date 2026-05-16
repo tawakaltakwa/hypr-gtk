@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+    <object class="GtkMenu" id="menu">
+		<child>
+			<object class="GtkMenuItem" id="pesan1">
+				<property name="name">AnggapJudul</property>
+				<property name="label">Daftar Keyboard Shortcut</property>
+			</object>
+		</child>
+		<child>
+			<object class="GtkMenuItem" id="pesan2">
+				<property name="name">CumaTeks</property>
+				<property name="label">SUPER+Return --- konsole</property>
+			</object>
+		</child>
+		<child>
+			<object class="GtkMenuItem" id="pesan3">
+				<property name="name">CumaTeks</property>
+				<property name="label">SUPER+E --- Dolphin</property>
+			</object>
+		</child>
+		<child>
+			<object class="GtkMenuItem" id="pesan3b">
+				<property name="name">CumaTeks</property>
+				<property name="label">SUPER+B --- Firefox</property>
+			</object>
+		</child>
+		<child>
+			<object class="GtkMenuItem" id="pesan4">
+				<property name="name">CumaTeks</property>
+				<property name="label">SUPER+Space --- Wofi</property>
+			</object>
+		</child>
+		<child>
+			<object class="GtkMenuItem" id="pesan5">
+				<property name="name">CumaTeks</property>
+				<property name="label">SUPER+R --- krunner</property>
+			</object>
+		</child>
+		<child>
+			<object class="GtkMenuItem" id="pesan6">
+				<property name="name">CumaTeks</property>
+				<property name="label">SUPER+Escape --- plasma-systemmonitor</property>
+			</object>
+		</child>
+		<child>
+			<object class="GtkMenuItem" id="pesan7">
+				<property name="name">CumaTeks</property>
+				<property name="label">SUPER+A --- Antigravity</property>
+			</object>
+		</child>
+		<child>
+			<object class="GtkMenuItem" id="pesan8">
+				<property name="name">CumaTeks</property>
+				<property name="label">SUPER+Q --- Quit/Tutup Aplikasi</property>
+			</object>
+		</child>
+		<child>
+			<object class="GtkMenuItem" id="pesan9">
+				<property name="name">CumaTeks</property>
+				<property name="label">SUPER+[PANAH] --- Pindah Fokus Antar Aplikasi</property>
+			</object>
+		</child>
+		<child>
+			<object class="GtkMenuItem" id="pesan10">
+				<property name="name">CumaTeks</property>
+				<property name="label">SUPER+CTRL+N --- Consume</property>
+			</object>
+		</child>
+		<child>
+			<object class="GtkMenuItem" id="pesan11">
+				<property name="name">CumaTeks</property>
+				<property name="label">SUPER+CTRL+M --- Expel</property>
+			</object>
+		</child>
+		<child>
+			<object class="GtkMenuItem" id="pesan12">
+				<property name="name">CumaTeks</property>
+				<property name="label">SUPER+F --- Preset Lebar (hanya di Scrolling Layout)</property>
+			</object>
+		</child>
+		<child>
+			<object class="GtkMenuItem" id="pesan13">
+				<property name="name">CumaTeks</property>
+				<property name="label">SUPER+SHIFT+F --- Fullscreen</property>
+			</object>
+		</child>
+		<child>
+			<object class="GtkMenuItem" id="pesan14">
+				<property name="name">CumaTeks</property>
+				<property name="label">SUPER+V --- Floating Layout</property>
+			</object>
+		</child>
+	</object>
+</interface>

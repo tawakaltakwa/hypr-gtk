@@ -1,0 +1,540 @@
+@import url("../warnaumum.css");
+
+* {
+    /*    font-family: 'Noto Sans Mono', 'Font Awesome 6 Free', 'Font Awesome 6 Brands', monospace; */
+    font-family: 'Arimo Nerd Font Propo';
+    font-size: 13px;
+    background: transparent;
+}
+
+tooltip {
+    border: 2px solid @warna1;
+    border-radius: 12px;
+    background: @background;
+    color: @foreground;
+}
+
+tooltip * {
+    color: @foreground;
+    text-shadow: none;
+}
+
+window {
+    color: @foreground;
+}
+
+window#waybar {
+    background-color: transparent;
+    color: @foreground;
+    min-height: 26px;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+/*
+window#waybar.empty {
+    background-color: transparent;
+}
+window#waybar.solo {
+    background-color: @foreground;
+}
+*/
+window#waybar.termite {
+    background-color: @background;
+}
+
+window#waybar.chromium {
+    background-color: @background;
+    border: none;
+}
+
+button {
+    /* margin-right: 1px;
+    padding-left: 3px;
+    padding-right: 0px; */
+    /* border: 2px solid transparent;
+    border-radius: 12px;
+    background: @warna1;
+    color: @foreground; */
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+
+button:hover {
+    /* border: 2px solid transparent;
+    border-radius: 12px;
+    background: @warna1;
+    color: @foreground; */
+    box-shadow: inherit;
+    text-shadow: inherit;
+}
+
+/* Taskbar */
+#taskbar {
+    padding: 0 4px;
+}
+
+#taskbar button {
+    padding: 0;
+    border: 0;
+    /* padding: 0 4px;
+    border: 2px solid @warna1;
+    border-radius: 12px;
+    background: @background;
+    color: @foreground;
+    margin: 2px 0; */
+}
+
+#niri-taskbar button {
+    background: @background;
+    color: @foreground;
+    padding: 0 8px;
+    margin: 0 2px;
+    border-radius: 4px;
+    min-height: 0;
+    transition: all 0.2s ease;
+}
+
+#niri-taskbar button.focused,
+#niri-taskbar button.active {
+    background: @warna1;
+    color: @background;
+}
+
+#niri-taskbar button.urgent {
+    background: @warna1;
+    color: @foreground;
+    border: 1px solid @foreground;
+}
+
+#niri-taskbar button:hover {
+    background: @warna1;
+    color: @background;
+    opacity: 0.8;
+}
+
+#workspaces button {
+    padding: 0;
+    margin: 0;
+    color: @foreground;
+    min-height: 0;
+    border-radius: 0;
+}
+
+#workspaces button.urgent {
+    background: @warna1;
+    color: @foreground;
+}
+
+#workspaces button:hover {
+    box-shadow: inherit;
+    text-shadow: inherit;
+    padding: 0;
+}
+
+#mode {
+    background-color: @warna3;
+    box-shadow: inset 0 -3px @foreground;
+}
+
+/* windget dalam group */
+#custom-gw-label,
+#custom-sc_label,
+#custom-sc_keylist,
+#custom-sc_terminal,
+#custom-sc_run,
+#custom-sc_browser,
+#custom-sc_rwaybar,
+#custom-sc_filemanager,
+#custom-sc_randwallpaper,
+#custom-ssuspend,
+#custom-shibernate,
+#custom-spoweroff,
+#custom-spoweroff-dgnkonfirmasi,
+#custom-sreboot,
+#custom-sreboot-dgnkonfirmasi,
+#custom-slock,
+#custom-slogout,
+#custom-labelmon,
+#mpris,
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#power-profiles-daemon,
+#mpd,
+#language,
+#keyboard-state,
+#custom-launcher,
+#custom-power,
+#custom-browser,
+#custom-shortcut,
+#custom-jamsunda {
+    padding: 0 8px;
+    margin: 0;
+    color: @foreground;
+    min-height: 0;
+}
+
+#window,
+#workspaces {
+    background-color: transparent;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left>widget:first-child>#workspaces {
+    margin-left: 4px;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right>widget:last-child>#workspaces {
+    margin-right: 4px;
+}
+
+label:focus {
+    background-color: @background;
+}
+
+/* Modules with Red Border & Black Background */
+#privacy,
+#keyboard-state,
+#temperature,
+#mpd,
+#power-profiles-daemon,
+#battery,
+#language,
+#wireplumber,
+#disk,
+#backlight,
+#network,
+#idle_inhibitor,
+#custom-browser,
+#custom-shortcut,
+#grkiri,
+#grkanan,
+#grtaskbar {
+    border: 2px solid transparent;
+    border-radius: 12px;
+    /* background: @background; */
+    color: @foreground;
+    min-height: 26px;
+    padding: 0;
+    margin: 0;
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    background-image: linear-gradient(@background, @background), linear-gradient(170deg, @warna1, @warna2);
+}
+
+#grkiri>*,
+#grkanan>*,
+#grsysmon>*,
+#grtaskbar>*,
+#grkiri button,
+#grkanan button,
+#grsysmon button,
+#grtaskbar button {
+    min-height: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/* latar merah teks putih, kenyakan untuk hover */
+#workspaces button.active,
+#workspaces button.focused,
+#custom-sc_keylist:hover,
+#custom-sc_terminal:hover,
+#custom-sc_run:hover,
+#custom-sc_browser:hover,
+#custom-sc_rwaybar:hover,
+#custom-sc_filemanager:hover,
+#custom-sc_randwallpaper:hover,
+#custom-spoweroff:hover,
+#custom-spoweroff-dgnkonfirmasi:hover,
+#custom-sreboot:hover,
+#custom-sreboot-dgnkonfirmasi:hover,
+#custom-ssuspend:hover,
+#custom-shibernate:hover,
+#custom-slock:hover,
+#custom-slogout:hover,
+#mpris:hover,
+#cpu:hover,
+#memory:hover,
+#taskbar button:hover,
+#taskbar button.active,
+#wireplumber.muted,
+#clock:hover,
+#network.disconnected,
+#tray>.active:hover,
+#tray>*:hover,
+#custom-power:hover,
+#pulseaudio:hover,
+#idle_inhibitor:hover,
+#custom-launcher:hover,
+#custom-browser:hover,
+#custom-shortcut:hover,
+#custom-jamsunda:hover {
+    border: 0;
+    background-image: linear-gradient(170deg, @warna1, @warna2), linear-gradient(170deg, @warna1, @warna2);
+    /* background: @warna1; */
+    color: @foreground2;
+}
+
+#pulseaudio.muted {
+    background-color: @foreground;
+    color: @warna2;
+}
+
+#temperature.critical,
+#idle_inhibitor.activated,
+#idle_inhibitor.activated:hover,
+#keyboard-state>label,
+#keyboard-state>label.locked,
+#privacy-item,
+#privacy-item.screenshare,
+#privacy-item.audio-in,
+#privacy-item.audio-out,
+#mpd.disconnected,
+#mpd.stopped,
+#mpd.paused,
+#power-profiles-daemon.performance,
+#power-profiles-daemon.balanced,
+#power-profiles-daemon.power-saver,
+#pulseaudio,
+#tray {
+    background: @background;
+    color: @foreground;
+}
+
+/* item ujung kanan */
+#custom-spoweroff,
+#custom-spoweroff-dgnkonfirmasi,
+#custom-power {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+/* item ujung kiri */
+#custom-launcher,
+#custom-jamsunda,
+#tray {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+#tray>.active {
+    background: @background;
+    color: @foreground;
+    border: 2px solid @background;
+}
+
+#tray>.passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray>.needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: @warna1;
+}
+
+#battery.charging,
+#battery.plugged {
+    color: @foreground;
+    background-color: @warna2;
+}
+
+#battery.critical:not(.charging) {
+    background-color: @warna1;
+    color: @foreground;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+* menu {
+    padding-left: 0;
+    padding-right: 0;
+    color: @foreground;
+    border: 2px solid @warna1;
+    border-radius: 8px;
+    background: @background;
+}
+
+* menu>*,
+* menu>menuitem:disabled {
+    color: #ddd;
+    border: 2px solid transparent;
+    border-radius: 0;
+}
+
+* menu>menuitem,
+#ItemPower {
+    margin-left: 2px;
+    margin-right: 2px;
+    color: @foreground;
+    border: 0;
+    border-radius: 0px;
+    background: @background;
+}
+
+* menu>menuitem:hover,
+#ItemPower:hover {
+    color: @foreground2;
+    border: 0;
+    border-radius: 0px;
+    /* background: @warna1; */
+    background-image: linear-gradient(170deg, @warna1, @warna2);
+}
+
+#ItemPowerS {
+    margin-left: 2px;
+    margin-right: 2px;
+    color: @warna1;
+    border: 2px solid transparent;
+    border-radius: 0px;
+    background: @background;
+}
+
+#ItemPowerS:hover {
+    color: @foreground2;
+    border: 2px solid transparent;
+    border-radius: 0px;
+    background: @warna1;
+}
+
+#CumaTeks,
+#CumaTeks:hover {
+    color: @foreground;
+    background: @background;
+    border-radius: 0px;
+    border: 0;
+}
+
+#AnggapJudul,
+#AnggapJudul:hover {
+    color: @foreground2;
+    /* background: @warna1; */
+    background-image: linear-gradient(170deg, @warna1, @warna2);
+    border: 0;
+    border-radius: 0px;
+    margin-top: 0px;
+}
+
+#custom-gw-biru {
+    padding: 0 8px;
+    margin: 0;
+    color: #00f;
+    min-height: 0;
+}
+
+#custom-gw-biru:hover {
+    color: #fff;
+    /* background: #00f; */
+    background-image: linear-gradient(170deg, #00f, #00b);
+}
+
+#custom-gw-birumuda {
+    padding: 0 8px;
+    margin: 0;
+    color: #0ff;
+    min-height: 0;
+}
+
+#custom-gw-birumuda:hover {
+    color: #000;
+    /* background: #0ff; */
+    background-image: linear-gradient(170deg, #0ff, #0bb);
+}
+
+#custom-gw-hijau {
+    padding: 0 8px;
+    margin: 0;
+    color: #0f0;
+    min-height: 0;
+}
+
+#custom-gw-hijau:hover {
+    color: #000;
+    /* background: #0f0; */
+    background-image: linear-gradient(170deg, #0f0, #0b0);
+}
+
+#custom-gw-kuning {
+    padding: 0 8px;
+    margin: 0;
+    color: #ff0;
+    min-height: 0;
+}
+
+#custom-gw-kuning:hover {
+    color: #000;
+    /* background: #ff0; */
+    background-image: linear-gradient(170deg, #ff0, #bb0);
+}
+
+#custom-gw-merah {
+    padding: 0 8px;
+    margin: 0;
+    color: #f00;
+    min-height: 0;
+}
+
+#custom-gw-merah:hover {
+    color: #000;
+    /* background: #f00; */
+    background-image: linear-gradient(170deg, #f00, #b00);
+}
+
+#custom-gw-oren {
+    padding: 0 8px;
+    margin: 0;
+    color: #fa4;
+    min-height: 0;
+}
+
+#custom-gw-oren:hover {
+    color: #000;
+    /* background: #fa4; */
+    background-image: linear-gradient(170deg, #fa4, #b90);
+}
+
+#custom-gw-pink {
+    padding: 0 8px;
+    margin: 0;
+    color: #f0f;
+    min-height: 0;
+}
+
+#custom-gw-pink:hover {
+    color: #000;
+    /* background: #f0f; */
+    background-image: linear-gradient(170deg, #f0f, #b0b);
+}
+
+#custom-gw-ungu {
+    padding: 0 8px;
+    margin: 0;
+    color: #b4f;
+    min-height: 0;
+}
+
+#custom-gw-ungu:hover {
+    color: #fff;
+    /* background: #b4f; */
+    background-image: linear-gradient(170deg, #b4f, #94b);
+}

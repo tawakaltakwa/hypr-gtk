@@ -1,0 +1,12 @@
+background-color=#000000
+text-color=#ffffff
+border-color=#bb44ff
+progress-color=over #bb44ff
+
+[urgency=normal]
+border-color=#bb44ff
+default-timeout=20000
+
+[urgency=high]
+border-color=#bb44ff
+default-timeout=0

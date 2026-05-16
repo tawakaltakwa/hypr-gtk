@@ -1,0 +1,43 @@
+@import url("../warnaumum.css");
+
+window {
+    background-image: url("/home/kal/.config/hypr/wallpaper/sisi-jalan.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#window-box {
+    padding: 20px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 12px;
+    background-image: linear-gradient(@background, @background), linear-gradient(170deg, @warna1, @warna2);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    color: @foreground;
+}
+
+button {
+    background-image: linear-gradient(170deg, @warna1, @warna2);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    color: @background;
+    border: 0;
+    /* Warna border tombol */
+    border-radius: 10px;
+    /* Sudut membulat */
+    padding-left: 12px;
+    /* Padding di dalam tombol */
+    padding-right: 12px;
+}
+
+entry {
+    border: 2px solid transparent;
+    background-image: linear-gradient(@foreground, @foreground), linear-gradient(170deg, @warna1, @warna2);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    /* Warna border kotak teks */
+    border-radius: 10px;
+    /* Sudut membulat */
+}

@@ -1,0 +1,485 @@
+{
+    // "layer": "top", // Waybar at top layer
+    // "position": "top", // Waybar position (top|bottom|left|right)
+    "height": 26, // Waybar height (to be removed for auto height)
+    "margin-bottom": 1,
+    // "width": 1280, // Waybar width
+    "spacing": 0, // Gaps between modules (4px)
+    // Choose the order of the modules
+    "modules-left": [
+        "group/grkiri"
+    ],
+    "modules-center": [],
+    "modules-right": [
+        "group/grkanan"
+    ],
+    "keyboard-state": {
+        "numlock": true,
+        "capslock": true,
+        "format": "{name} {icon}",
+        "format-icons": {
+            "locked": "",
+            "unlocked": ""
+        }
+    },
+    "wlr/taskbar": {
+        "format": " {icon} ",
+        "sort-by-app-id": false,
+        "tooltip-format": "{app_id}-{title}",
+        "on-click": "activate",
+        "on-click-middle": "close"
+    },
+    "hyprland/workspaces": {
+        "format": " {id} - {name} "
+    },
+    "mpd": {
+        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
+        "format-disconnected": "Disconnected ",
+        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+        "unknown-tag": "N/A",
+        "interval": 2,
+        "consume-icons": {
+            "on": " "
+        },
+        "random-icons": {
+            "off": "<span color=\"#f53c3c\"></span> ",
+            "on": " "
+        },
+        "repeat-icons": {
+            "on": " "
+        },
+        "single-icons": {
+            "on": "1 "
+        },
+        "state-icons": {
+            "paused": "",
+            "playing": ""
+        },
+        "tooltip-format": "MPD (connected)",
+        "tooltip-format-disconnected": "MPD (disconnected)"
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+    "tray": {
+        "spacing": 2
+    },
+    "clock": {
+        "format": "{:%d %B %Y}",
+        "format-alt": "{:%A, %B %d, %Y (%R)}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode": "year",
+            "mode-mon-col": 3,
+            "weeks-pos": "right",
+            "on-scroll": 1,
+            "on-click-right": "mode",
+            "format": {
+                "months": "<span color='#ffffff'><b>{}</b></span>",
+                "days": "<span color='#ffffff'><b>{}</b></span>",
+                "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+                "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+                "today": "<span color='#ff0000'><b><u>{}</u></b></span>"
+            }
+        },
+        "actions": {
+            "on-click-right": "mode",
+            "on-click-forward": "tz_up",
+            "on-click-backward": "tz_down",
+            "on-scroll-up": "shift_up",
+            "on-scroll-down": "shift_down"
+        }
+    },
+    "cpu": {
+        "format": "CPU: {usage}% ",
+        "tooltip": false,
+        "on-click": "gnome-system-monitor -r",
+        "interval": 10
+    },
+    "memory": {
+        "interval": 30,
+        "format": "RAM: {used:0.1f}G/{total:0.1f}G  SWAP: {swapUsed:0.1f}G/{swapTotal:0.1f}G",
+        "tooltip": false,
+        "on-click": "gnome-system-monitor -p"
+    },
+    "temperature": {
+        // "thermal-zone": 2,
+        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 80,
+        // "format-critical": "{temperatureC}°C {icon}",
+        "format": "{temperatureC}°C {icon}",
+        "format-icons": [
+            "",
+            "",
+            ""
+        ]
+    },
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{percent}% {icon}",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    "battery#bat2": {
+        "bat": "BAT2"
+    },
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "pulseaudio/slider": {
+        "tooltip-format": "Audio Volume",
+        "min": 0,
+        "max": 100,
+        "orientation": "horizontal"
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        // "format": "{volume}% {icon} {format_source}",
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon}  {format_source}",
+        "format-bluetooth-muted": " {icon}  {format_source}",
+        "format-muted": "  {format_source}",
+        "format-source": "{volume}%  ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": " ",
+            "hands-free": " ",
+            "headset": " ",
+            "phone": " ",
+            "portable": " ",
+            "car": " ",
+            "default": [
+                " ",
+                " ",
+                " "
+            ]
+        },
+        "on-click": "pavucontrol -t 1",
+        "on-click-right": "kitty -e alsamixer"
+    },
+    "wireplumber": {
+        "format": "{volume}%",
+        "format-muted": "",
+        "on-click": "helvum"
+    },
+    "mpris": {
+        "format": "{player_icon} {dynamic}",
+        "format-paused": "{status_icon} <i>{dynamic}</i>",
+        "player-icons": {
+            "default": "▶",
+            "audacious": "󰓃",
+            "mpv": "🎵"
+        },
+        "status-icons": {
+            "paused": "⏸"
+        },
+        "max-length": 30,
+        "interval": 1
+    },
+    "custom/spoweroff": {
+        "format": "",
+        "on-click": "poweroff",
+        "tooltip-format": "Power Off"
+    },
+    "custom/spoweroff-dgnkonfirmasi": {
+        "format": "⏻",
+        "tooltip-format": "Power Off / Shutdown",
+        "menu": "on-click",
+        "menu-file": "$HOME/.config/hypr/waybar/poweroff_konfirmasi.xml",
+        "menu-actions": {
+            "shutdown": "systemctl poweroff"
+        }
+    },
+    "custom/sreboot-dgnkonfirmasi": {
+        "format": "",
+        "tooltip-format": "Reboot",
+        "menu": "on-click",
+        "menu-file": "$HOME/.config/hypr/waybar/reboot_konfirmasi.xml",
+        "menu-actions": {
+            "reboot": "systemctl reboot"
+        }
+    },
+    "custom/sreboot": {
+        "format": "",
+        "on-click": "reboot",
+        "tooltip-format": "Reboot"
+    },
+    "custom/ssuspend": {
+        "format": "⏾",
+        "on-click": "systemctl suspend",
+        "tooltip-format": "Suspend"
+    },
+    "custom/shibernate": {
+        "format": "⏼",
+        "on-click": "systemctl hibernate",
+        "tooltip-format": "Hibernate"
+    },
+    "custom/slock": {
+        "format": "",
+        "on-click": "gtklock -s ~/.config/hypr/gtklock/style.css",
+        "tooltip-format": "Lock"
+    },
+    "custom/slogout": {
+        "format": "",
+        "on-click": "command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'",
+        "tooltip-format": "Logout"
+    },
+    "custom/sc_label": {
+        "format": "󰀻",
+        "tooltip": false
+    },
+    "custom/sc_keylist": {
+        "format": "",
+        //"tooltip-format": "Keyboard Shortcut List",
+        "menu": "on-click",
+        "menu-file": "$HOME/.config/hypr/waybar/keyinfo.xml",
+        "menu-actions": {
+            "pesanTutup": ""
+        }
+    },
+    "custom/sc_terminal": {
+        "format": "",
+        "on-click": "bash ~/.config/fastfetch/slowfetch.sh",
+        "tooltip-format": "Terminal: konsole"
+    },
+    "custom/sc_run": {
+        "format": "",
+        "on-click": "wmenu-run -N 000000 -n ffffff -S ff0000 -s 000000",
+        "tooltip-format": "Runner: wmenu"
+    },
+    "custom/sc_filemanager": {
+        "format": "",
+        "on-click": "pcmanfm-qt",
+        "tooltip-format": "File Manager: pcmanfm-qt"
+    },
+    "custom/sc_browser": {
+        "format": "",
+        "on-click": "firefox",
+        "tooltip-format": "Browser: Firefox"
+    },
+    "custom/sc_randwallpaper": {
+        "format": "",
+        "on-click": "bash ~/.config/hypr/scripts/change-wallpaper.sh",
+        "tooltip-format": "Random Wallpaper"
+    },
+    "custom/sc_rwaybar": {
+        "format": "",
+        "on-click": "bash ~/.config/hypr/waybar/restart.sh",
+        "tooltip-format": "Restart Waybar"
+    },
+    "custom/launcher": {
+        "format": "",
+        "on-click": "wofi -s ~/.config/hypr/wofi/styles.css --show drun -I -G -W 40% -l 1",
+        "tooltip": false
+    },
+    "custom/browser": {
+        "format": " Firefox",
+        "on-click": "firefox",
+        "tooltip-format": "Browser"
+    },
+    "custom/spasi": {
+        "format": "  ",
+        "tooltip": false
+    },
+    "custom/jamsunda": {
+        "format": "{text}",
+        "tooltip": false,
+        "interval": 60,
+        "exec": "bash ~/.config/hypr/waybar/jamsunda.sh -f 12 -p",
+        "on-click": "bash ~/.config/hypr/waybar/jamsunda_info.sh"
+    },
+    "group/grkanan": {
+        "orientation": "horizontal",
+        "modules": [
+            "group/grwaktu",
+            //"group/grsuara",
+            "pulseaudio",
+            "group/grsession"
+        ]
+    },
+    "group/grkiri": {
+        "orientation": "horizontal",
+        "modules": [
+            "custom/launcher",
+            "group/grshortcut",
+            "tray",
+            "hyprland/workspaces",
+            "custom/spasi",
+            "wlr/taskbar"
+            //"wlr/taskbar"
+        ]
+    },
+    "group/grtaskbar": {
+        "orientation": "horizontal",
+        "modules": [
+            "hyprland/workspaces",
+            "wlr/taskbar"
+        ]
+    },
+    "custom/labelmon": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "gnome-system-monitor"
+    },
+    "group/grsysmon": {
+        "orientation": "horizontal",
+        "drawer": {
+            "transition-duration": 500
+        },
+        "modules": [
+            "custom/labelmon",
+            "cpu",
+            "memory"
+        ]
+    },
+    "group/grsession": {
+        "orientation": "horizontal",
+        "drawer": {
+            "transition-duration": 500,
+            "transition-left-to-right": false
+        },
+        "modules": [
+            "custom/spoweroff-dgnkonfirmasi",
+            "custom/slogout",
+            "custom/slock",
+            // "custom/ssuspend",
+            "custom/shibernate",
+            "custom/sreboot-dgnkonfirmasi"
+        ]
+    },
+    "group/grshortcut": {
+        "orientation": "horizontal",
+        "drawer": {
+            "transition-duration": 500,
+            "click-to-reveal": true
+        },
+        "modules": [
+            "custom/sc_label",
+            "custom/sc_keylist",
+            "custom/sc_terminal",
+            "custom/sc_run",
+            "custom/sc_browser",
+            "custom/sc_filemanager",
+            "custom/sc_randwallpaper",
+            "custom/sc_rwaybar",
+            "group/grgantiwarna"
+        ]
+    },
+    "group/grwaktu": {
+        "orientation": "horizontal",
+        "drawer": {
+            "transition-duration": 500
+        },
+        "modules": [
+            "custom/jamsunda",
+            "clock"
+        ]
+    },
+    "group/grsuara": {
+        "orientation": "horizontal",
+        "modules": [
+            "pulseaudio",
+            "mpris"
+        ]
+    },
+    "custom/gw-label": {
+        "format": "",
+        "tooltip-format": "Ganti Warna"
+    },
+    "custom/gw-biru": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "bash ~/.config/hypr/scripts/ganti-warna.sh -w biru && bash ~/.config/hypr/waybar/restart.sh && makoctl reload"
+    },
+    "custom/gw-birumuda": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "bash ~/.config/hypr/scripts/ganti-warna.sh -w birumuda && bash ~/.config/hypr/waybar/restart.sh && makoctl reload"
+    },
+    "custom/gw-hijau": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "bash ~/.config/hypr/scripts/ganti-warna.sh -w hijau && bash ~/.config/hypr/waybar/restart.sh && makoctl reload"
+    },
+    "custom/gw-kuning": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "bash ~/.config/hypr/scripts/ganti-warna.sh -w kuning && bash ~/.config/hypr/waybar/restart.sh && makoctl reload"
+    },
+    "custom/gw-merah": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "bash ~/.config/hypr/scripts/ganti-warna.sh -w merah && bash ~/.config/hypr/waybar/restart.sh && makoctl reload"
+    },
+    "custom/gw-oren": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "bash ~/.config/hypr/scripts/ganti-warna.sh -w oren && bash ~/.config/hypr/waybar/restart.sh && makoctl reload"
+    },
+    "custom/gw-pink": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "bash ~/.config/hypr/scripts/ganti-warna.sh -w pink && bash ~/.config/hypr/waybar/restart.sh && makoctl reload"
+    },
+    "custom/gw-ungu": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "bash ~/.config/hypr/scripts/ganti-warna.sh -w ungu && bash ~/.config/hypr/waybar/restart.sh && makoctl reload"
+    },
+    "group/grgantiwarna": {
+        "orientation": "horizontal",
+        "drawer": {
+            "transition-duration": 500
+        },
+        "modules": [
+            "custom/gw-label",
+            "custom/gw-biru",
+            "custom/gw-birumuda",
+            "custom/gw-hijau",
+            "custom/gw-kuning",
+            "custom/gw-merah",
+            "custom/gw-oren",
+            "custom/gw-pink",
+            "custom/gw-ungu"
+        ]
+    }
+}

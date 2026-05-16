@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+    <object class="GtkMenu" id="menu">
+		<child>
+			<object class="GtkMenuItem" id="pesan1">
+				<property name="name">AnggapJudul</property>
+				<property name="label">KONFIRMASI</property>
+			</object>
+		</child>
+		<child>
+			<object class="GtkMenuItem" id="pesan2">
+				<property name="name">CumaTeks</property>
+				<property name="label">mau Shutdown atau gak sengaja ke klik?</property>
+			</object>
+		</child>
+
+		<child>
+			<object class="GtkMenuItem" id="pesan3">
+				<property name="name">CumaTeks</property>
+				<property name="label">klik tombol [  SHUTDOWN ] untuk Shutdown</property>
+			</object>
+		</child>
+		<child>
+			<object class="GtkMenuItem" id="shutdown">
+				<property name="name">ItemPower</property>
+				<property name="label"> SHUTDOWN</property>
+			</object>
+		</child>
+	</object>
+</interface>
