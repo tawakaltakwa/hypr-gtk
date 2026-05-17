@@ -268,6 +268,11 @@ hl.bind(mainMod .. " + A", hl.dsp.exec_cmd("antigravity"))
 hl.bind(mainMod .. " + G", hl.dsp.exec_cmd("dolphin /home/kal/SagalaAya/data/MEGA/gambargabut"))
 hl.bind(mainMod .. " + Escape", hl.dsp.exec_cmd("gnome-system-monitor"))
 
+-- Screenshots
+
+hl.bind(mainMod .. " + CTRL + 1", hl.dsp.exec_cmd("grimblast --notify save screen ~/Pictures/Screenshots/grimblast-$(date +%F-%H%M%S).png"))
+hl.bind(mainMod .. " + CTRL + 2", hl.dsp.exec_cmd("grimblast --notify save area ~/Pictures/Screenshots/grimblast-$(date +%F-%H%M%S).png"))
+
 -- Scrolling layout: cycle column width (0.5 <-> 1.0)
 hl.bind(mainMod .. " + F", hl.dsp.layout("colresize +conf"))      -- 0.5 -> 1.0 -> 0.5 ...
 hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.fullscreen())

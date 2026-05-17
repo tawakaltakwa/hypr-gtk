@@ -11,6 +11,7 @@ Konfigurasi Hyprland dengan aplikasi pendukung GTK. Default layout workspace 1 m
 - mako
 - gtklock
 - wofi
+- grimblast-git
 - polkit-gnome
 - Arimo Nerd Font
 - NeoSpleen Nerd Font
