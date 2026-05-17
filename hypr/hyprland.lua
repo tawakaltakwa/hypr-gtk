@@ -265,7 +265,7 @@ hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("firefox"))
 hl.bind(mainMod .. " + A", hl.dsp.exec_cmd("antigravity"))
-hl.bind(mainMod .. " + G", hl.dsp.exec_cmd("dolphin /home/kal/SagalaAya/data/MEGA/gambargabut"))
+hl.bind(mainMod .. " + G", hl.dsp.exec_cmd("nautilus /home/kal/SagalaAya/data/MEGA/gambargabut"))
 hl.bind(mainMod .. " + Escape", hl.dsp.exec_cmd("gnome-system-monitor"))
 
 -- Screenshots

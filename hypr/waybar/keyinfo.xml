@@ -10,13 +10,13 @@
 		<child>
 			<object class="GtkMenuItem" id="pesan2">
 				<property name="name">CumaTeks</property>
-				<property name="label">SUPER+Return --- konsole</property>
+				<property name="label">SUPER+Return --- Terminal: Kitty</property>
 			</object>
 		</child>
 		<child>
 			<object class="GtkMenuItem" id="pesan3">
 				<property name="name">CumaTeks</property>
-				<property name="label">SUPER+E --- Dolphin</property>
+				<property name="label">SUPER+E --- File Manager: Nautilus</property>
 			</object>
 		</child>
 		<child>
@@ -34,13 +34,13 @@
 		<child>
 			<object class="GtkMenuItem" id="pesan5">
 				<property name="name">CumaTeks</property>
-				<property name="label">SUPER+R --- krunner</property>
+				<property name="label">SUPER+R --- wmenu</property>
 			</object>
 		</child>
 		<child>
 			<object class="GtkMenuItem" id="pesan6">
 				<property name="name">CumaTeks</property>
-				<property name="label">SUPER+Escape --- plasma-systemmonitor</property>
+				<property name="label">SUPER+Escape --- System Monitor</property>
 			</object>
 		</child>
 		<child>
@@ -89,6 +89,18 @@
 			<object class="GtkMenuItem" id="pesan14">
 				<property name="name">CumaTeks</property>
 				<property name="label">SUPER+V --- Floating Layout</property>
+			</object>
+		</child>
+		<child>
+			<object class="GtkMenuItem" id="pesan15">
+				<property name="name">CumaTeks</property>
+				<property name="label">SUPER+CTRL+1 --- Screenshot Screen Recording</property>
+			</object>
+		</child>
+		<child>
+			<object class="GtkMenuItem" id="pesan16">
+				<property name="name">CumaTeks</property>
+				<property name="label">SUPER+CTRL+2 --- Screenshot Area atau Window Aktif</property>
 			</object>
 		</child>
 	</object>

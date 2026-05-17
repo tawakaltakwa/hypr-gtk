@@ -1,6 +1,6 @@
 ## Hyprland Config
 
-Konfigurasi Hyprland dengan aplikasi pendukung GTK. Default layout workspace 1 menggunakan SCROLLING dan workspace 2 menggunakan DWINDLE/tiling.
+Konfigurasi Hyprland dengan aplikasi pendukung GTK. Workspace 1 menggunakan scrolling dan workspace 2 menggunakan dwindle/tiling.
 
 ## Aplikasi yang digunakan
 - Hyprland
