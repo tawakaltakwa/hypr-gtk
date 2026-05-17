@@ -4,9 +4,11 @@ border-color=#00ff00
 progress-color=over #00ff00
 
 [urgency=normal]
+border-radius=14
 border-color=#00ff00
 default-timeout=20000
 
 [urgency=high]
+border-radius=14
 border-color=#00ff00
 default-timeout=0

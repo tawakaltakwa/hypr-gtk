@@ -1,6 +1,6 @@
 # See man 5 mako
 
-include=~/.config/hypr/preset-warna/merah
+include=~/.config/hypr/preset-warna/ungu
 
 max-visible=7
 sort=-time
