@@ -417,6 +417,11 @@ hl.window_rule({
     scrolling_width = 1.0
 })
 
+hl.window_rule({ 
+    match = { class = "Waydroid" },
+    scrolling_width = 1.0
+})
+
 -- Center Waybar menus (popups)
 hl.window_rule({
     match = { class = "waybar" },
