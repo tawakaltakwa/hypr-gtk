@@ -1,0 +1,77 @@
+@import url("../warnaumum.css");
+
+/* DEFINISI VARIABEL WARNA (Palet Gelap Modern) */
+@define-color bg_main #1e1e2e;
+/* Background utama window */
+@define-color bg_card #252538;
+/* Background baris tabel genap */
+@define-color accent #cba6f7;
+/* Warna ungu untuk judul & header */
+@define-color text_main #cdd6f4;
+/* Warna teks utama */
+@define-color text_dim #a6adc8;
+/* Warna teks deskripsi */
+@define-color btn_color #f38ba8;
+/* Warna tombol tutup (merah pastel) */
+@define-color btn_text #11111b;
+/* Warna teks di dalam tombol */
+
+/* WINDOW UTAMA */
+#shortcut-window {
+    background-color: @background;
+}
+
+/* JUDUL POPUP */
+#shortcut-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: @warna1;
+    padding-bottom: 5px;
+}
+
+/* HEADER TABEL */
+#table-header {
+    font-size: 14px;
+    font-weight: bold;
+    color: @warna1;
+    border-bottom: 2px solid @warna1;
+    padding: 5px;
+}
+
+/* SEL TABEL (CELL STYLING) */
+.key-cell {
+    font-family: "NeoSpleen Nerd Font", "monospace";
+    font-weight: bold;
+    color: @foreground;
+    padding: 6px 12px;
+}
+
+.desc-cell {
+    font-size: 13px;
+    color: @foreground;
+    padding: 6px 12px;
+}
+
+/* EFEK BELANG-BELANG (ZEBRA STRIPING) */
+/* .row-even {
+    background-color: @warna3;
+}
+
+.row-odd {
+    background-color: transparent;
+} */
+
+/* TOMBOL TUTUP */
+#shortcut-btn-close {
+    background-color: @warna2;
+    color: @background;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 8px;
+    margin-top: 10px;
+}
+
+#shortcut-btn-close:hover {
+    background-color: @warna1;
+    color: @background;
+}

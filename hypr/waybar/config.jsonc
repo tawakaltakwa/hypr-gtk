@@ -269,12 +269,13 @@
     },
     "custom/sc_keylist": {
         "format": "",
-        //"tooltip-format": "Keyboard Shortcut List",
-        "menu": "on-click",
-        "menu-file": "$HOME/.config/hypr/waybar/keyinfo.xml",
-        "menu-actions": {
-            "pesanTutup": ""
-        }
+        "tooltip-format": "Keyboard Shortcut List",
+        // "menu": "on-click",
+        // "menu-file": "$HOME/.config/hypr/waybar/keyinfo.xml",
+        // "menu-actions": {
+        //     "pesanTutup": ""
+        // }
+        "on-click": "$HOME/.config/hypr/waybar/popup-keylist.py"
     },
     "custom/sc_terminal": {
         "format": "",
