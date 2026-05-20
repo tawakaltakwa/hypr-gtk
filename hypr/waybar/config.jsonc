@@ -223,20 +223,12 @@
     "custom/spoweroff-dgnkonfirmasi": {
         "format": "⏻",
         "tooltip-format": "Power Off / Shutdown",
-        "menu": "on-click",
-        "menu-file": "$HOME/.config/hypr/waybar/poweroff_konfirmasi.xml",
-        "menu-actions": {
-            "shutdown": "systemctl poweroff"
-        }
+        "on-click": "$HOME/.config/hypr/waybar/popup-konfirmasi-shutdown.py"
     },
     "custom/sreboot-dgnkonfirmasi": {
         "format": "",
         "tooltip-format": "Reboot",
-        "menu": "on-click",
-        "menu-file": "$HOME/.config/hypr/waybar/reboot_konfirmasi.xml",
-        "menu-actions": {
-            "reboot": "systemctl reboot"
-        }
+        "on-click": "$HOME/.config/hypr/waybar/popup-konfirmasi-reboot.py"
     },
     "custom/sreboot": {
         "format": "",
@@ -270,17 +262,12 @@
     "custom/sc_keylist": {
         "format": "",
         "tooltip-format": "Keyboard Shortcut List",
-        // "menu": "on-click",
-        // "menu-file": "$HOME/.config/hypr/waybar/keyinfo.xml",
-        // "menu-actions": {
-        //     "pesanTutup": ""
-        // }
         "on-click": "$HOME/.config/hypr/waybar/popup-keylist.py"
     },
     "custom/sc_terminal": {
         "format": "",
         "on-click": "bash ~/.config/fastfetch/slowfetch.sh",
-        "tooltip-format": "Terminal: konsole"
+        "tooltip-format": "Terminal: kitty + Fastfetch"
     },
     "custom/sc_run": {
         "format": "",
@@ -288,9 +275,9 @@
         "tooltip-format": "Runner: wmenu"
     },
     "custom/sc_filemanager": {
-        "format": "",
-        "on-click": "pcmanfm-qt",
-        "tooltip-format": "File Manager: pcmanfm-qt"
+        "format": "",
+        "on-click": "nautilus",
+        "tooltip-format": "File Manager: nautilus"
     },
     "custom/sc_browser": {
         "format": "",

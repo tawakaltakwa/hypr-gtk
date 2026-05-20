@@ -2,7 +2,7 @@
 -- File ini mengatur warna Hyprland berdasarkan preset aktif.
 -- Diganti otomatis oleh ganti-warna.sh
 
-local warna = require("preset-warna.birumuda")
+local warna = require("preset-warna.hijau")
 
 -- Expand 3-digit hex (#0ff) ke format rgba Hyprland (rgba(00ffffffee))
 local function hex_to_rgba(hex, alpha)

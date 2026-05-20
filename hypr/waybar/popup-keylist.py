@@ -10,9 +10,9 @@ class ShortcutPopup(Gtk.Window):
         
         # Pengaturan Window
         self.set_border_width(20)
-        self.set_default_size(500, 400)
+        self.set_default_size(500, 500)
         self.set_position(Gtk.WindowPosition.CENTER) # Muncul di tengah layar agar mudah dibaca
-        self.set_name("shortcut-window")
+        self.set_name("window-utama")
 
         # Main Layout (Vertical Box)
         vbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=15)
@@ -97,7 +97,7 @@ class ShortcutPopup(Gtk.Window):
 
         # Tombol Tutup di bagian bawah
         btn_close = Gtk.Button(label="Tutup")
-        btn_close.set_name("shortcut-btn-close")
+        btn_close.set_name("tombol")
         btn_close.connect("clicked", Gtk.main_quit)
         vbox.pack_start(btn_close, False, False, 0)
 

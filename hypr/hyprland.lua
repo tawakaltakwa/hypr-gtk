@@ -432,6 +432,18 @@ hl.window_rule({
     scrolling_width = 1.0
 })
 
+hl.window_rule({ 
+    match = { class = "popup-konfirmasi-reboot.py" },
+    float = true,
+    center = true
+})
+
+hl.window_rule({ 
+    match = { class = "popup-konfirmasi-shutdown.py" },
+    float = true,
+    center = true
+})
+
 -- Center Waybar menus (popups)
 hl.window_rule({
     match = { class = "waybar" },
