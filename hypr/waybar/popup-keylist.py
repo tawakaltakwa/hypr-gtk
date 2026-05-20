@@ -21,7 +21,7 @@ class ShortcutPopup(Gtk.Window):
 
         # Judul Pop-up
         title_label = Gtk.Label(label="󰌌  KEYBOARD SHORTCUTS")
-        title_label.set_name("shortcut-title")
+        title_label.set_name("judul")
         title_label.set_halign(Gtk.Align.CENTER)
         vbox.pack_start(title_label, False, False, 0)
 
