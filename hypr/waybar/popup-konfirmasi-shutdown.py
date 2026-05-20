@@ -21,8 +21,14 @@ class KonfirmasiShutdown(Gtk.Window):
         self.add(vbox)
 
         # Judul Pop-up
+        title_label = Gtk.Label(label="KONFIRMASI")
+        title_label.set_name("judul")
+        title_label.set_halign(Gtk.Align.CENTER)
+        vbox.pack_start(title_label, False, False, 0)
+
+        # Judul Pop-up
         title_label = Gtk.Label(label="Apakah Anda yakin ingin me-shutdown system?")
-        title_label.set_name("konfirmasi-shutdown-title")
+        title_label.set_name("cumateks")
         title_label.set_halign(Gtk.Align.CENTER)
         vbox.pack_start(title_label, False, False, 0)
 
