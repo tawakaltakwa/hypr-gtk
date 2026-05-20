@@ -15,3 +15,4 @@ Konfigurasi Hyprland dengan aplikasi pendukung GTK. Workspace 1 menggunakan scro
 - polkit-gnome
 - Arimo Nerd Font
 - NeoSpleen Nerd Font
+- python-gobject
