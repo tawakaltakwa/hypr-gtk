@@ -8,12 +8,9 @@
 
 #outer-box {
 	position: relative;
-	border: 2px solid transparent;
+	border: 3px solid @warna1;
 	padding: 6px;
-	/* background-color: @background; */
-	background-image: linear-gradient(@background, @background), linear-gradient(170deg, @warna1, @warna2);
-	background-origin: border-box;
-	background-clip: padding-box, border-box;
+	background-color: @background;
 }
 
 #window {
@@ -23,10 +20,7 @@
 }
 
 #entry:selected {
-	/* background-color: @warna1; */
-	background-image: linear-gradient(170deg, @warna1, @warna2);
-	background-origin: border-box;
-	background-clip: padding-box, border-box;
+	background-color: @warna1;
 	color: @foreground;
 }
 
@@ -35,13 +29,10 @@
 }
 
 #input {
-	/* background-color: @background; */
-	background-image: linear-gradient(@background, @background), linear-gradient(170deg, @warna1, @warna2);
-	background-origin: border-box;
-	background-clip: padding-box, border-box;
-	/* border-bottom: 2px solid transparent; */
+	background-color: @background;
+	border-bottom: 3px solid transparent;
 	color: @foreground;
-	border: 2px solid transparent;
+	border: 3px solid @warna1;
 	margin-bottom: 6px;
 }
 
