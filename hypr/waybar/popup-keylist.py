@@ -98,6 +98,7 @@ class ShortcutPopup(Gtk.Window):
         # Tombol Tutup di bagian bawah
         btn_close = Gtk.Button(label="Tutup")
         btn_close.set_name("tombol")
+        btn_close.set_halign(Gtk.Align.CENTER)
         btn_close.connect("clicked", Gtk.main_quit)
         vbox.pack_start(btn_close, False, False, 0)
 
@@ -121,5 +122,5 @@ if __name__ == "__main__":
     # Menutup pop-up jika menekan tombol ESC
     win.connect("key-press-event", lambda w, e: Gtk.main_quit() if e.keyval == Gdk.KEY_Escape else False)
     # Menutup jika klik di luar window (fokus hilang)
-    win.connect("focus-out-event", lambda w, e: Gtk.main_quit())
+    # win.connect("focus-out-event", lambda w, e: Gtk.main_quit())
     Gtk.main()
