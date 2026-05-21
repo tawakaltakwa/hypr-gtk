@@ -7,10 +7,12 @@
 }
 
 #outer-box {
-	position: relative;
-	border: 3px solid @warna1;
+	/*position: relative;*/
 	padding: 6px;
-	background-color: @background;
+	border: 2px solid transparent;
+	background-origin: border-box;
+	background-clip: padding-box, border-box;
+	background-image: linear-gradient(@background, @background), linear-gradient(170deg, @warna1, @warna2);
 }
 
 #window {
@@ -20,8 +22,7 @@
 }
 
 #entry:selected {
-	background-color: @warna1;
-	color: @foreground;
+	background-image: linear-gradient(175deg, @warna1, @background);
 }
 
 #text:selected {
@@ -29,11 +30,13 @@
 }
 
 #input {
-	background-color: @background;
-	border-bottom: 3px solid transparent;
 	color: @foreground;
-	border: 3px solid @warna1;
 	margin-bottom: 6px;
+	padding: 6px;
+	border: 2px solid transparent;
+	background-origin: border-box;
+	background-clip: padding-box, border-box;
+	background-image: linear-gradient(@background, @background), linear-gradient(170deg, @warna1, @warna2);
 }
 
 image {
