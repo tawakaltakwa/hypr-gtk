@@ -1,6 +1,4 @@
-@define-color background #000;
-@define-color foreground #fff;
-@define-color foreground2 #000;
-@define-color warna1 #0ff;
-@define-color warna2 #0bb;
-@define-color warna3 #088;
+@define-color background #000000;
+@define-color foreground #ffffff;
+@define-color warna1 #00ffff;
+@define-color warna2 #008888;

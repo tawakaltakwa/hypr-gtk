@@ -135,7 +135,7 @@ button:hover {
 }
 
 #mode {
-    background-color: @warna3;
+    background-color: @abu;
     box-shadow: inset 0 -3px @foreground;
 }
 
@@ -290,7 +290,7 @@ label:focus {
     border: 0;
     background-image: linear-gradient(170deg, @warna1, @warna2), linear-gradient(170deg, @warna1, @warna2);
     /* background: @warna1; */
-    color: @foreground2;
+    color: @background;
 }
 
 #pulseaudio.muted {
@@ -377,7 +377,7 @@ label:focus {
 
 * menu>*,
 * menu>menuitem:disabled {
-    color: #ddd;
+    color: @abu;
     border: 2px solid transparent;
     border-radius: 0;
 }

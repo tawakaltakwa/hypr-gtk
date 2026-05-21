@@ -1,5 +1,5 @@
 return {
-    warna1 = "#ff0",
-    warna2 = "#bb0",
-    warna3 = "#880",
+    warna1 = "#ffff00ff",
+    warna2 = "#bbbb00ff",
+    abu = "#888888ff"
 }

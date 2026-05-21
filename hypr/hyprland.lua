@@ -264,7 +264,7 @@ hl.bind(mainMod .. " + space", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("firefox"))
-hl.bind(mainMod .. " + A", hl.dsp.exec_cmd("antigravity"))
+hl.bind(mainMod .. " + A", hl.dsp.exec_cmd("antigravity-ide"))
 hl.bind(mainMod .. " + G", hl.dsp.exec_cmd("nautilus /home/kal/SagalaAya/data/MEGA/gambargabut"))
 hl.bind(mainMod .. " + Escape", hl.dsp.exec_cmd("gnome-system-monitor"))
 
@@ -403,7 +403,7 @@ hl.window_rule({
 })
 
 hl.window_rule({ 
-    match = { class = "^(A|a)ntigravity" },
+    match = { class = "^(A|a)ntigravity-ide" },
     scrolling_width = 1.0
 })
 
