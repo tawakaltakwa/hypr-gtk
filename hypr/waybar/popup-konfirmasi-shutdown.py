@@ -64,7 +64,7 @@ class KonfirmasiShutdown(Gtk.Window):
 
     def on_ya_clicked(self, widget):
         # Melakukan shutdown system
-        os.system("systemctl shutdown")
+        os.system("systemctl poweroff")
         Gtk.main_quit()
 
 if __name__ == "__main__":
