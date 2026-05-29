@@ -47,9 +47,9 @@ hl.on("hyprland.start", function ()
    hl.exec_cmd("waybar -c ~/.config/hypr/waybar/config.jsonc -s ~/.config/hypr/waybar/style.css")
    hl.exec_cmd("xdg-desktop-portal-gnome")
    hl.exec_cmd("mako -c ~/.config/hypr/mako/config")
-   --hl.exec_cmd("deadd-notification-center &") ngaco
    hl.exec_cmd("awww-daemon")
    hl.exec_cmd("bash ~/.config/hypr/scripts/ganti-auto.sh")
+   hl.exec_cmd("hypridle")
  end)
 
 -------------------------------
