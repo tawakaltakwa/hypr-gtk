@@ -11,6 +11,7 @@ Konfigurasi Hyprland dengan aplikasi pendukung GTK. Workspace 1 menggunakan scro
 - mako
 - gtklock
 - wofi
+- hypridle
 - grimblast-git
 - polkit-gnome
 - Arimo Nerd Font
