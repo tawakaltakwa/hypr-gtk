@@ -2,7 +2,7 @@
 -- File ini mengatur warna Hyprland berdasarkan preset aktif.
 -- Diganti otomatis oleh ganti-warna.sh
 
-local warna = require("preset-warna.birumuda")
+local warna = require("preset-warna.ungu")
 
 -- Terapkan warna ke border Hyprland
 hl.config({

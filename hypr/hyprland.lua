@@ -432,6 +432,16 @@ hl.window_rule({
 })
 
 hl.window_rule({ 
+    match = { class = "^(S|s)team" },
+    scrolling_width = 1.0
+})
+
+hl.window_rule({ 
+    match = { class = "^steam_app$" },
+    scrolling_width = 1.0
+})
+
+hl.window_rule({ 
     match = { class = "popup-konfirmasi-reboot.py" },
     float = true,
     center = true

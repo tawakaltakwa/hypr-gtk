@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Waktu interval (dalam detik) - 10 menit = 600 detik
-INTERVAL=600
+# Waktu interval (dalam detik) - 15 menit = 900 detik
+INTERVAL=900
 
 # Loop tak terbatas
 while true; do
