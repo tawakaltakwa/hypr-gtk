@@ -237,12 +237,12 @@
     },
     "custom/ssuspend": {
         "format": "⏾",
-        "on-click": "systemctl suspend",
+        "on-click": "gtklock -s ~/.config/hypr/gtklock/style.css & systemctl suspend",
         "tooltip-format": "Suspend"
     },
     "custom/shibernate": {
         "format": "⏼",
-        "on-click": "systemctl hibernate",
+        "on-click": "gtklock -s ~/.config/hypr/gtklock/style.css & systemctl hibernate",
         "tooltip-format": "Hibernate"
     },
     "custom/slock": {
