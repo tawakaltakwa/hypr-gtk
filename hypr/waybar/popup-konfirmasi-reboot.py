@@ -27,7 +27,7 @@ class KonfirmasiReboot(Gtk.Window):
         vbox.pack_start(title_label, False, False, 0)
 
         # Judul Pop-up
-        title_label = Gtk.Label(label="Apakah Anda yakin ingin me-reboot system?")
+        title_label = Gtk.Label(label="Reboot system?")
         title_label.set_name("cumateks")
         title_label.set_halign(Gtk.Align.CENTER)
         vbox.pack_start(title_label, False, False, 0)
