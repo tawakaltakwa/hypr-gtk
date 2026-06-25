@@ -261,6 +261,7 @@ hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("wmenu-run -N 000000 -n ffffff -S ff0000 -s 000000 -b"))
 hl.bind(mainMod .. " + space", hl.dsp.exec_cmd(menu))
+hl.bind(mainMod .. " + D", hl.dsp.exec_cmd("nwg-drawer -s ~/.config/hypr/nwg-drawer/styles.css"))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("firefox"))
@@ -439,6 +440,16 @@ hl.window_rule({
 
 hl.window_rule({ 
     match = { class = "^steam_app$" },
+    scrolling_width = 1.0
+})
+
+hl.window_rule({ 
+    match = { class = "jetbrains-studio" },
+    scrolling_width = 1.0
+})
+
+hl.window_rule({ 
+    match = { class = "moe.nyarchlinux.nekoplay" },
     scrolling_width = 1.0
 })
 
