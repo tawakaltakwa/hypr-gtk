@@ -10,25 +10,25 @@ class ListConfig(Gtk.Window):
         super().__init__(title="Aplikasi Favorit")
         
         # Pengaturan Window
-        self.set_border_width(20)
+        self.set_border_width(10)
         self.set_name("window-utama")
 
         # Main Layout (Vertical Box)
-        vbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=15)
+        vbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=10)
         vbox.set_halign(Gtk.Align.FILL)
         vbox.set_valign(Gtk.Align.CENTER)
         self.add(vbox)
 
         # Judul Pop-up
-        title_label = Gtk.Label(label="DAFTAR APLIKASI/DISEKTORI YANG SERING DIBUKA")
+        title_label = Gtk.Label(label="DAFTAR APLIKASI/DIRKTORI YANG SERING DIBUKA")
         title_label.set_name("judul")
         title_label.set_halign(Gtk.Align.CENTER)
         vbox.pack_start(title_label, False, False, 0)
 
         # Grid untuk Tabel
         grid = Gtk.Grid()
-        grid.set_column_spacing(25)
-        grid.set_row_spacing(12)
+        grid.set_column_spacing(5)
+        grid.set_row_spacing(5)
         grid.set_halign(Gtk.Align.CENTER)
         vbox.pack_start(grid, True, True, 0)
 
@@ -45,8 +45,12 @@ class ListConfig(Gtk.Window):
 
         # Data Baris: (Nama, Path/Deskripsi, Action Type, Action Target, Label Tombol)
         rows_data = [
-            ("MEGA", "mega cloud data", "cmd", "megasync", "Run"),
-            ("Brisk", "Brisk download manager", "cmd", "brisk", "Run"),
+            ("Waydroid Start", "Waydroid Full UI", "cmd", "waydroid show-full-ui", "Run"),
+            ("Waydroid Stop", "Hentikan service waydroid - systemctl", "cmd", "systemctl stop waydroid-container.service", "Run"),
+            ("Apache start", "Mulai service apache - systemctl", "cmd", "systemctl start httpd", "Run"),
+            ("Apache stop", "Hentikan service apache - systemctl", "cmd", "systemctl stop httpd", "Run"),
+            ("MariaDB start", "Mulai service mariadb - systemctl", "cmd", "systemctl start mariadb", "Run"),
+            ("MariaDB stop", "Hentikan service mariadb - systemctl", "cmd", "systemctl stop mariadb", "Run"),
             ("Warung", "~/SagalaAya/data/MEGA/Warung", "path", "~/SagalaAya/data/MEGA/Warung", "Buka Direktori"),
         ]
 

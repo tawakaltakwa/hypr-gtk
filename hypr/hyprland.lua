@@ -271,8 +271,8 @@ hl.bind(mainMod .. " + Escape", hl.dsp.exec_cmd("gnome-system-monitor"))
 
 -- Screenshots
 
-hl.bind(mainMod .. " + CTRL + 1", hl.dsp.exec_cmd("grimblast --notify save screen ~/Pictures/Screenshots/grimblast-$(date +%F-%H%M%S).png"))
-hl.bind(mainMod .. " + CTRL + 2", hl.dsp.exec_cmd("grimblast --notify save area ~/Pictures/Screenshots/grimblast-$(date +%F-%H%M%S).png"))
+hl.bind(mainMod .. " + SHIFT + 1", hl.dsp.exec_cmd("grimblast --notify save screen ~/Pictures/Screenshots/grimblast-$(date +%F-%H%M%S).png"))
+hl.bind(mainMod .. " + SHIFT + 2", hl.dsp.exec_cmd("grimblast --notify save area ~/Pictures/Screenshots/grimblast-$(date +%F-%H%M%S).png"))
 
 -- Scrolling layout: cycle column width (0.5 <-> 1.0)
 hl.bind(mainMod .. " + F", hl.dsp.layout("colresize +conf"))      -- 0.5 -> 1.0 -> 0.5 ...
@@ -439,7 +439,7 @@ hl.window_rule({
 })
 
 hl.window_rule({ 
-    match = { class = "^steam_app$" },
+    match = { class = "^steam_app" },
     scrolling_width = 1.0
 })
 
