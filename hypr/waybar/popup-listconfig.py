@@ -52,6 +52,7 @@ class ListConfig(Gtk.Window):
             ("MariaDB start", "Mulai service mariadb - systemctl", "cmd", "systemctl start mariadb", "Run"),
             ("MariaDB stop", "Hentikan service mariadb - systemctl", "cmd", "systemctl stop mariadb", "Run"),
             ("Warung", "~/SagalaAya/data/MEGA/Warung", "path", "~/SagalaAya/data/MEGA/Warung", "Buka Direktori"),
+            ("Aplikasi Portable", "Kumpulan Aplikasi Portable", "path", "~/SagalaAya/PortableApp", "Buka Direktori"),
         ]
 
         for row_idx, (name, display_val, action_type, action_target, btn_label) in enumerate(rows_data, start=1):
